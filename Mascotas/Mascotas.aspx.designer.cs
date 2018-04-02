@@ -76,24 +76,6 @@ namespace Mascotas {
         protected global::System.Web.UI.WebControls.TextBox txtMascota;
         
         /// <summary>
-        /// Control Label5.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// Control txtRaza.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRaza;
-        
-        /// <summary>
         /// Control Label6.
         /// </summary>
         /// <remarks>
@@ -103,13 +85,31 @@ namespace Mascotas {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// Control txtEspecie.
+        /// Control DropDownEspecie.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEspecie;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownEspecie;
+        
+        /// <summary>
+        /// Control Label5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// Control DropDownRaza.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownRaza;
         
         /// <summary>
         /// Control btnCrear.

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Mascotas.aspx.cs" Inherits="Mascotas.Mascotas" %>
+﻿<%@ Page EnableEventValidation="false" Language="C#" AutoEventWireup="true" CodeBehind="Mascotas.aspx.cs" Inherits="Mascotas.Mascotas" %>
 
 <!DOCTYPE html>
 
@@ -15,11 +15,13 @@
             <asp:Label ID="Label3" runat="server" Text="Nombre Cliente"></asp:Label>            
             <asp:TextBox ID="txtNombreCliente" runat="server"></asp:TextBox>
             <asp:Label ID="Label4" runat="server" Text="Mascota"></asp:Label>            
-            <asp:TextBox ID="txtMascota" runat="server"></asp:TextBox>
-            <asp:Label ID="Label5" runat="server" Text="Raza"></asp:Label>            
-            <asp:TextBox ID="txtRaza" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMascota" runat="server"></asp:TextBox>                      
             <asp:Label ID="Label6" runat="server" Text="Especie"></asp:Label>            
-            <asp:TextBox ID="txtEspecie" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="DropDownEspecie" runat="server" OnSelectedIndexChanged="DropDownEspecie_SelectedIndexChanged">
+            </asp:DropDownList>
+            <asp:Label ID="Label5" runat="server" Text="Raza"></asp:Label>  
+            <asp:DropDownList ID="DropDownRaza" runat="server">
+            </asp:DropDownList>
             <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClick="btnCrear_Click" />
         </div>
         <div>

@@ -1,0 +1,11 @@
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\upb.tabd.entidades.dll.config
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\upb.tabd.entidades.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\upb.tabd.entidades.pdb
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\EntityFramework.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\EntityFramework.xml
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\obj\Debug\upb.tabd.entidades.csprojResolveAssemblyReference.cache
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\obj\Debug\upb.tabd.entidades.csproj.CoreCompileInputs.cache
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\obj\Debug\upb.tabd.entidades.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.entidades\obj\Debug\upb.tabd.entidades.pdb

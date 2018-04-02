@@ -1,0 +1,11 @@
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\upb.tabd.broker.dll.config
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\upb.tabd.broker.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\upb.tabd.broker.pdb
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\EntityFramework.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\EntityFramework.xml
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\obj\Debug\upb.tabd.broker.csprojResolveAssemblyReference.cache
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\obj\Debug\upb.tabd.broker.csproj.CoreCompileInputs.cache
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\obj\Debug\upb.tabd.broker.dll
+C:\Users\Koro_\Documents\Mascotas\upb.tabd.broker\obj\Debug\upb.tabd.broker.pdb

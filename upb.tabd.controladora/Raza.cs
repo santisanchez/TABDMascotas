@@ -13,24 +13,22 @@ namespace upb.tabd.controladora
         BR.BDMascotasEntities db = new BR.BDMascotasEntities();
 
 
-        public List<EN.Raza> ConsultarRaza(int idRaza)
+        public List<EN.Raza> ConsultarRaza(int idEspecie)
         {
-            List<EN.Raza> resultado = new List<EN.Raza>();
-            //List<BR.Raza> item = db.Razas.Where(x => x.IdRaza == idRaza || idRaza == -1).ToList();
+            List<EN.Raza> resultado = new List<EN.Raza>();            
+
+            //var item = from r in db.Razas                      
+            //           where (r.IdEspecie == idEspecie)
+            //           select new { r.IdRaza, r.Raza1};
 
             var item = from r in db.Razas
-                       join e in db.Especies on r.IdEspecie equals e.IdEspecie
-                       where (r.IdRaza == idRaza || idRaza == -1)
-                       select new { r.IdRaza, r.Raza1, e.IdEspecie, e.Especie1 };
+                       select r;
 
             foreach (var registro in item)
             {
-                EN.Raza objRaza = new EN.Raza();
-                objRaza.Especie = new EN.Especie();
+                EN.Raza objRaza = new EN.Raza();                
                 objRaza.IdRaza = int.Parse(registro.IdRaza.ToString());
-                objRaza.NombreRaza = registro.Raza1;
-                objRaza.Especie.IdEspecie = registro.IdEspecie;
-                objRaza.Especie.NombreEspecie = registro.Especie1;
+                objRaza.NombreRaza = registro.Raza1;                               
 
                 resultado.Add(objRaza);
             }

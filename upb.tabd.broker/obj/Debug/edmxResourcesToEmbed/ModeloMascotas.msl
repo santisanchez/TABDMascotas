@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDMascotasModelStoreContainer" CdmEntityContainer="BDMascotasEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="BDMascotasModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="IdentCliente" ColumnName="IdentCliente" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlPesoes">
+      <EntityTypeMapping TypeName="BDMascotasModel.ControlPeso">
+        <MappingFragment StoreEntitySet="ControlPeso">
+          <ScalarProperty Name="NroControl" ColumnName="NroControl" />
+          <ScalarProperty Name="IdMascota" ColumnName="IdMascota" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especies">
+      <EntityTypeMapping TypeName="BDMascotasModel.Especie">
+        <MappingFragment StoreEntitySet="Especie">
+          <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+          <ScalarProperty Name="Especie1" ColumnName="Especie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mascotas">
+      <EntityTypeMapping TypeName="BDMascotasModel.Mascota">
+        <MappingFragment StoreEntitySet="Mascota">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdentCliente" ColumnName="IdentCliente" />
+          <ScalarProperty Name="IdRaza" ColumnName="IdRaza" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Razas">
+      <EntityTypeMapping TypeName="BDMascotasModel.Raza">
+        <MappingFragment StoreEntitySet="Raza">
+          <ScalarProperty Name="IdRaza" ColumnName="IdRaza" />
+          <ScalarProperty Name="Raza1" ColumnName="Raza" />
+          <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vacunas">
+      <EntityTypeMapping TypeName="BDMascotasModel.Vacuna">
+        <MappingFragment StoreEntitySet="Vacuna">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Vacuna1" ColumnName="Vacuna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vacunacions">
+      <EntityTypeMapping TypeName="BDMascotasModel.Vacunacion">
+        <MappingFragment StoreEntitySet="Vacunacion">
+          <ScalarProperty Name="NroVacunacion" ColumnName="NroVacunacion" />
+          <ScalarProperty Name="IdVacuna" ColumnName="IdVacuna" />
+          <ScalarProperty Name="IdMascota" ColumnName="IdMascota" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

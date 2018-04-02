@@ -64,9 +64,11 @@ namespace upb.tabd.controladora
             var confirmacion = false;
             try
             {
-                BR.Mascota objMascota = db.Mascotas.Where(x => x.Id == id).FirstOrDefault();
-                db.Mascotas.Remove(objMascota);
-                db.SaveChanges();
+                var mascota = (from m in db.Mascotas
+                              where m.Id == id
+                              select m).First();
+                mascota.Visible = 0;
+                db.SaveChanges();                
                 confirmacion = true;
             }
             catch (Exception ex)

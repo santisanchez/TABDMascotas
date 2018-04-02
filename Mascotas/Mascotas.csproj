@@ -94,6 +94,16 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\upb.tabd.controladora\upb.tabd.controladora.csproj">
+      <Project>{ca49bab1-b2f1-4c53-8969-958dad4f79e5}</Project>
+      <Name>upb.tabd.controladora</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\upb.tabd.entidades\upb.tabd.entidades.csproj">
+      <Project>{a83a36a2-66a6-4b88-8ad6-c5e9333b4885}</Project>
+      <Name>upb.tabd.entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

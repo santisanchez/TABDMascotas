@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="Especie.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raza.cs" />
@@ -57,10 +58,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mascotas\Mascotas.csproj">
-      <Project>{585eadc7-a089-498e-81de-3f8d654381d2}</Project>
-      <Name>Mascotas</Name>
-    </ProjectReference>
     <ProjectReference Include="..\upb.tabd.broker\upb.tabd.broker.csproj">
       <Project>{2d25efc0-b078-4c59-a272-a5d5e44565f7}</Project>
       <Name>upb.tabd.broker</Name>
