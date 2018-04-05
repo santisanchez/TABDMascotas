@@ -54,23 +54,29 @@ namespace Mascotas
         }
 
         private void CrearMascotaNueva()
-        {
+        {            
             string nombreMascota = txtMascota.Text;
+            double idCliente = Double.Parse(txtIdCliente.Text);
+            string nombreCliente = txtNombreCliente.Text;
+            long idRaza = long.Parse(DropDownRaza.SelectedValue.ToString());
+
             EN.Cliente cliente = new EN.Cliente();
-            cliente.IdentCliente = Double.Parse(txtIdCliente.Text);
-            cliente.NombreCliente = txtNombreCliente.Text;
-            EN.Raza raza = new EN.Raza();
-            raza.NombreRaza = DropDownRaza.SelectedValue;
-            EN.Especie especie = new EN.Especie();             
+            cliente.IdentCliente = idCliente;
+            cliente.NombreCliente = nombreCliente;
+
+            EN.Especie especie = new EN.Especie();
             especie.IdEspecie = int.Parse(DropDownEspecie.SelectedValue);
+            especie.NombreEspecie = DropDownEspecie.SelectedItem.ToString();
+
+            EN.Raza raza = new EN.Raza();
+            raza.IdRaza = raza.IdRaza = int.Parse(DropDownRaza.SelectedValue.ToString());
+            raza.NombreRaza = DropDownRaza.SelectedItem.ToString();
+            raza.Especie = especie;
 
             EN.Mascota mascota = new EN.Mascota();
-            mascota.IdentMascota = generarIdMascota();
-            mascota.NombreMascota = nombreMascota;
+            mascota.NombreMascota = nombreMascota;          
+            mascota.Cliente = cliente;
             mascota.Raza = raza;
-            mascota.Especie = especie;
-            mascota.Cliente = cliente;            
-
 
             CT.Mascota ctMascota = new CT.Mascota();
             ctMascota.CrearMascota(mascota);
@@ -78,17 +84,8 @@ namespace Mascotas
             txtIdCliente.Text = string.Empty;
             txtNombreCliente.Text = string.Empty;
             txtMascota.Text = string.Empty;
-        }
-
-        private long generarIdMascota()
-        {
-            String idMascota;
-            Random rnd = new Random();
-
-            idMascota = rnd.Next(0, 9999999).ToString("D7");
-
-            return long.Parse(idMascota);
-        }
+            ConsultarMascotas(-1);
+        }   
 
         protected void Button3_Click(object sender, EventArgs e)
         {
