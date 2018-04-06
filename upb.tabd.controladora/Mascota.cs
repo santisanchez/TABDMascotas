@@ -33,11 +33,14 @@ namespace upb.tabd.controladora
                     mascota.IdentMascota = int.Parse(registro.Id.ToString());
                     mascota.NombreMascota = registro.Nombre;
 
-                    mascota.Raza = new EN.Raza();
-                    mascota.Raza.NombreRaza = registro.Raza1;
-
                     mascota.Especie = new EN.Especie();
+                    mascota.Especie.IdEspecie = registro.IdEspecie;
                     mascota.Especie.NombreEspecie = registro.Especie1;
+
+                    mascota.Raza = new EN.Raza();
+                    mascota.Raza.IdRaza = int.Parse(registro.IdRaza.ToString());
+                    mascota.Raza.NombreRaza = registro.Raza1;
+                    mascota.Raza.Especie = mascota.Especie;
 
                     mascota.Cliente = new EN.Cliente();
                     mascota.Cliente.IdentCliente = int.Parse(registro.IdentCliente.ToString());
@@ -69,6 +72,37 @@ namespace upb.tabd.controladora
                               select m).First();
                 mascota.Visible = 0;
                 db.SaveChanges();                
+                confirmacion = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return confirmacion;
+        }
+
+        public bool ActualizarMascota(EN.Mascota objMascota)
+        {
+            var confirmacion = false;
+            try
+            {
+                var mascota = (from m in db.Mascotas
+                               where m.Id == objMascota.IdentMascota
+                               select m).First();
+                EN.Raza raza = new EN.Raza();
+                raza = objMascota.Raza;
+                mascota.Cliente.IdentCliente = objMascota.Cliente.IdentCliente;
+                mascota.Cliente.NombreCliente = objMascota.Cliente.NombreCliente;
+                mascota.Nombre = objMascota.NombreMascota;                
+                mascota.IdRaza = objMascota.Raza.IdRaza;
+                //mascota.Raza.Especie.IdEspecie = objMascota.Raza.Especie.IdEspecie;
+                //mascota.Raza.Especie.Especie1 = objMascota.Raza.Especie.NombreEspecie;
+                //mascota.Raza.IdRaza = objMascota.Raza.IdRaza;
+                //mascota.Raza.Raza1 = objMascota.Raza.NombreRaza;
+                //mascota.Raza.IdEspecie = objMascota.Raza.Especie.IdEspecie;
+                db.SaveChanges();
                 confirmacion = true;
             }
             catch (Exception ex)
